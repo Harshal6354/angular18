@@ -6,10 +6,11 @@ import { HttpClient } from '@angular/common/http';
 import { Constant } from '../constant/constant';
 import { Customer } from '../class/customer';
 import { Service1Service } from '../SERVICES/service1.service';
+import { ReuseComponent } from "../REUSEBALECOMP/reuse/reuse.component";
 @Component({
   selector: 'app-pipe',
   standalone: true,
-  imports: [UpperCasePipe, LowerCasePipe, DatePipe, CurrencyPipe, Pipe1Pipe, CommonModule, FormsModule],
+  imports: [UpperCasePipe, LowerCasePipe, DatePipe, CurrencyPipe, Pipe1Pipe, CommonModule, FormsModule, ReuseComponent],
   templateUrl: './pipe.component.html',
   styleUrl: './pipe.component.css'
 })
