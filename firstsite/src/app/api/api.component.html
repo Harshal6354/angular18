@@ -1,0 +1,29 @@
+<p>api works!</p>
+<div class="row">
+    <div class="col-2">
+        <button class="btn btn-success" (click)="getALLuser()">Get ALL user</button>
+    </div>  
+</div>
+<div  style="color: red;">
+<select class="form-select">
+    @for (item of customerList; track $index) {
+        <option>{{item.cusId}}</option>
+   }
+</select>
+<select class="form-select">
+    @for (item of userList; track $index) {
+        <option>{{item.id}}</option>
+    }
+</select>
+   <div [ngClass]="divBgColor">My home</div>
+<button (click)="onclickBg()" >change color</button>
+<div class="row">
+    <div class="col-3" [ngClass]="num1==num2? 'bg-success' :'bg-primary'">
+        <h1>div-1</h1>
+    </div>
+    <button (click)="onToggle()" >toggle</button>
+</div>
+<input type="text" [(ngModel)]="num1">
+<input type="text" [(ngModel)]="num2">
+<div></div>
+

@@ -1,0 +1,68 @@
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <div class="container-fluid">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+         <a class="nav-link active" routerLink="add-data2">data2</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="data-bind">data-bind</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="add-comp">template Form</a>
+        </li>
+        <li class="nav-item">
+           <a class="nav-link" routerLink="new1-comp">new1-comp</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="rsform">rsform</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="api-comp">api-get</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="pipe-comp">pipe-comp</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="api-post">api-post</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="api-view">api-viewchild</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="lifecycle">lifecycle</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="template">template</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="for-reuse">for-reuse</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="animation">animation</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="signal">signal</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="payment">payment</a>
+        </li>
+        <form class="d-flex myfx">
+          <select  name="selectedRole" [(ngModel)]="selectedRole"  (ngModelChange)="onRoleChange($event)" >
+            <option value="user" >User role</option>
+            <option value="guest" >Guest role</option>
+          </select>
+        </form>
+        <form class="d-flex">
+          <select  name="selectedRole" [(ngModel)]="selectedRole"  (ngModelChange)="onchange2($event)" >
+            <option value="user" >User role2</option>
+            <option value="guest" >Guest role2</option>
+          </select>
+        </form>
+      </ul>
+      
+    </div>
+    
+  </nav>
+  <div class="container">
+    <router-outlet></router-outlet>
+  </div>

@@ -1,0 +1,40 @@
+<app-reuse [message]="'welcome back'" [ngClass]="div1BgColor"></app-reuse>
+<h2 [ngClass]="div1BgColor">hello</h2>
+<h2>{{inputType}}</h2>
+<div>
+  <h1>{{ courseName }}</h1>
+</div>
+<div>{{ inputType }}</div>
+<div>
+  <input type="text" (click)="ShowNew()"><br />
+</div>
+<input type="{{ inputType }}" />
+<div [class]="Myxclass">Mega</div>
+<input type="text" [value]="rollNo" />
+<h2>{{ courseName }}</h2>
+<button class="btn btn-success" (click)="showAlert('Angular in JS')">Show Alert</button><br />
+
+<span (click)="showAlert('This is my span')">Shio</span>
+
+<button class="btn" (click)="NewShow()">Change Number</button>
+
+<input type="number" [(ngModel)]="rollNo" value="go now" />
+
+<button>click</button>
+
+<div>
+  <h1>{{courseName}}</h1>
+</div>
+
+<div>{{inputType}}</div>
+
+<div><input type="text" [value]="courseName" placeholder="enter text"></div>
+<div>
+  <select name="student">
+    <option *ngFor="let student of ObjArray" [value]="student.studentid">{{student.name}}</option>
+  </select>
+</div>
+
+<div>
+
+</div>

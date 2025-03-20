@@ -1,0 +1,27 @@
+<div class="row">
+    <div class="col-3">{{Mysignal()}}</div>
+    <div class="col-3">{{Mysignal2()}}</div> 
+    <div class="col-3">{{firstName()}}</div> 
+    <div class="col-3">{{lastName()}}</div>
+    <div class="col-3">{{fullName()}}</div>
+    <div class="col-3">{{cityList()}}</div>   
+    <div class="col-3">{{studObj2().class1}}</div>   
+    <div class="col-3">{{studObj2().rollno}}</div>   
+</div>
+<div class="row">
+    <div class="col-3"><button class="btn btn-success" (click)=" changeName()">change name</button></div>
+    <div class="col-3"><button class="btn btn-success" (click)=" changeFirstName() ">change firstname</button></div>
+    <div class="col-3"><button class="btn btn-success" (click)=" changeLastName()">change lastname</button></div>
+    <div class="col-3"><button class="btn btn-success" (click)=" addcity()">change city</button></div>   
+    <div class="col-3"><button class="btn btn-success" (click)="changestud() ">change student rollno</button></div>   
+</div>
+<div class="row"> 
+   <h1> <span>new signal</span></h1>
+    <div class="col-3">{{myNewNAme()}}</div>
+    <div class="col-3">{{MyNewNo()}}</div>
+    <div class="col-3">{{MynewsRoll()}}</div>
+    <button class="btn btn-success" (click)="changestudent()">chane no.</button>
+</div>
+<div *ngfor="let item of Iuser">
+    <div>{{item.userId}}</div>
+</div>

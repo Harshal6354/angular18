@@ -1,0 +1,36 @@
+<div>
+    <div class="row">
+    <div class="col-4" style="background-color: yellow;">original value- {{firstName}}
+     <br>after pipe - {{firstName | uppercase}}
+    </div>
+    <div class="col-4 text-center" style="background-color: red;">
+         ORIGINAL- {{SecondNAme}}
+        <br>=>1after pipe -{{SecondNAme | lowercase}}
+
+    </div>
+    <div class="col-4">
+        before-{{currentDate}}<br>
+        current date-{{currentDate | date}}<br>    
+        current date-{{currentDate | date:'dd-MMM-yyyy'}}</div>    
+        Mylocal usd-{{Mycurrency | currency:'USA'}} 
+    </div>
+</div>
+<div class="row">
+    <div class="col-6" >MyCurrency-{{Mycurrency | currency:'INR' }}</div> 
+</div>
+<div class="row">
+<div class="col-6">MyCurrency-{{ STATE | pipe1}}</div>
+</div>
+<div>
+    <h1 [ngClass]="fontcolor">New world</h1>
+    <button (click)="colorful()">Change Color</button>
+</div>
+<div>
+</div>
+<div>{{validation_Message.nroll}}</div>
+<span>{{validation_Message.name}}</span>
+<div *ngFor="let item of customerlist">
+    <h1>{{item.cusId}}</h1>
+</div>
+<h1>{{currentValue}}</h1>
+<h2>{{currentValue2}}</h2>

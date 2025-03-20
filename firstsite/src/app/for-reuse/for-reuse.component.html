@@ -1,0 +1,55 @@
+<app-reuse2 [message]="'welcome'"></app-reuse2>
+<app-reuse2 [new_alert]="'alert-success'" [message]="'Some warning'"></app-reuse2>
+<p>for-reuse works!</p>
+<app-reuse2 [btnName]="'new btn'" [btnClass]="'btn btn-success'"></app-reuse2>
+<input type="text" id="txt1"> 
+<div>
+    <ng-container>
+        <p>this is container</p>
+    </ng-container>
+</div>
+<div>
+    <table>
+        <ng-container *ngIf="isApi">
+            <tr>
+                <td colspan="4" class="text-center">
+                    <div class="spinner-grow text-primary" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                    <div class="spinner-grow text-secondary" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                    <div class="spinner-grow text-success" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                    <div class="spinner-grow text-danger" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                    <div class="spinner-grow text-warning" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                    <div class="spinner-grow text-info" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                    <div class="spinner-grow text-light" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                    <div class="spinner-grow text-dark" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                </td>
+            </tr>
+        </ng-container>      
+        <ng-container *ngIf="!isApi">
+            <tbody>
+                <tr *ngFor="let student of userlist">                   
+                    <td>{{student.name}}</td>
+                    <td>{{student.username}}</td>
+                    <td>{{student.email}}</td>
+                </tr>
+            </tbody>
+        </ng-container>
+    </table>
+</div>
+<button (click)="getuser()">click</button>
+<span>{{Validation_message.REUIRED}}</span>

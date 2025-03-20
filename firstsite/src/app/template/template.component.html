@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="row">
+    <div class="col-3">
+            <div class="bg-primary p-3" *ngIf="isUserloggedIn; else nglogged">{{UserName}}</div>
+        </div>
+        <ng-template #nglogged>
+            <div class="bg-primary p-3">
+                <span>User not logged in</span>
+            </div>
+        </ng-template>
+    </div>
+    <div class="row">
+        <div class="col-4">
+            <ng-template #dynamictm>
+                <p>Hi from raze</p>
+            </ng-template>
+        </div>
+        <div class="col-4">
+            <div #dynamicContainer></div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-3 text-center"></div>
+        <div class="col-3 text-center"></div>
+        <div class="col-3 text-center">
+            <button class="btn btn-danger" (click)="LoadTemplate()">Load Content</button>
+        </div>
+    </div>
+</div>

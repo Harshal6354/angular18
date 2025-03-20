@@ -1,0 +1,23 @@
+<div id="login-page">
+  <div class="login">
+    <h2 class="login-title">Login</h2>
+    <p class="notice">Please login to access the system</p>
+     <form class="form-login" (ngSubmit)="onLogin()">
+      <label for="email">Username</label>
+      <div class="input-email">
+        <i class="fas fa-envelope icon"></i>
+        <input [(ngModel)]="userObj.username" type="text" name="username" placeholder="Enter your username" required>
+      </div>
+      <label for="password">Password</label>
+      <div class="input-password">
+        <i class="fas fa-lock icon"></i>
+        <input [(ngModel)]="userObj.password" type="password" name="password" placeholder="Enter your password" required>
+      </div>
+      <button type="submit"><i class="fas fa-door-open"></i> Sign in</button>
+    </form>
+    <a href="#">Forgot your password?</a>
+  </div>
+  <div class="background">
+    <h1>Welcome back</h1>
+  </div>
+</div>

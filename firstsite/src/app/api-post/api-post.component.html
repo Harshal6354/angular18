@@ -1,0 +1,42 @@
+<div class="row">
+<div class="col-12">
+        <label for="departmentNAme">Department Name</label>
+        <input type="text" [(ngModel)]="depObj.departmentName" id="departmentNAme" class="form-control"></div>
+        <div class="col-12">
+        <label for="departmentLogo">Department Logo</label>
+        <input type="text" [(ngModel)]="depObj.departmentLogo" class="form-control" id="departmentLogo">
+    </div>
+    <div class="col-6">
+        <button class="btn btn-success" (click)="onSave()">Save</button>
+    </div>
+    <div class="col-6">
+        <button class="btn btn-warning" (click)="onreset()">reset</button>
+    </div>
+</div>
+<table border="6">
+    <thead>
+        <th>Sr no</th>
+        <th>Name</th>
+        <th>City</th>
+        <th>Status</th>
+        <th>city list</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let key of deptList">
+        <td>{{key.departmentName}}</td>
+        <td>{{key.departmentLogo}}</td>
+        </tr>    
+    </tbody>
+</table>
+<h1>New</h1>
+<app-reuse [btnClass]="'btn btn-success'" [btntext]="'save btn'"></app-reuse>
+<app-reuse [btnClass]="'btn btn-warning'" [btntext]="'warning'"></app-reuse>
+<ng-container *ngIf="isContainer"> 
+    <p>this is a container</p>
+</ng-container>
+<p *ngFor="let a of userlist">{{a.message}}</p>
+<button (click)="getUser()">click</button>
+<div [ngStyle]="{'background-color': divBgColor, 'color': 'white', 'padding': '10px'}">
+ My home
+</div>
+<button (click)="onclickBg()">Change Color</button>

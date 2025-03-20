@@ -1,0 +1,99 @@
+<!-- <p>data2 works!</p>
+<div>{{courseName}}</div>
+<input [type]="inputType">
+<div>
+    <button class="btn" (click)="showAlert('welcome')">show button</button>
+</div>
+<div>
+    <input type="text" [(ngModel)]="courseName">
+</div><br>
+<div>
+    <select [(ngModel)]="cityName">
+        <option value="ngModel">Select</option>
+        <option value="ahmedabad">ahmedabad</option>
+        <option value="surat">surat</option>
+        <option value="mumbai">mumbai</option>
+    </select>
+</div>
+<button (click)="changrCourseNAme()">Change Course</button>
+<h2>{{firstname()}}</h2>` -->
+
+<!-- <div  *ngIf="isDiv1Visible">
+    Schools
+</div>
+
+<div><button (click)="hideDiv1()">Hide</button>
+    <button (click)="showDiv1()">Show</button>
+</div>
+
+<div *ngIf="num1==num2" class="bg-danger">New div</div>
+<input type="text" [(ngModel)]="num1" placeholder="num1">
+<input type="text" [(ngModel)]="num2" placeholder="num2">
+<div class="col-3">
+    <ul>
+        <li *ngFor="let city of cityArray">{{city}}</li>
+    </ul>
+</div>
+<div>
+    <h1>cities</h1> <select name="city" id="cities">
+        <option value="mumbai">mumbai</option>
+        <option value="delhi">delhi</option>
+        <option value="pune">pune</option>
+        <option value="surat">surat</option>
+    </select>
+</div> -->
+  <button routerLink="/add-comp">Change to add-comp</button>
+  <h3>@for (key of StudentofCL; track $index) {
+      <div>{{key.city}}</div>    
+}</h3>
+
+<div class="row">
+    <div class="col-3">
+        <input type="text" [(ngModel)]="dayNumber">
+    </div>
+    <div class="col-3">
+      Day Name is:
+        @switch (dayNumber) {
+            @case ('1') {
+                <span>Mon</span>
+            }
+            @case ('2') {
+                <span>tue</span>
+            }
+            @case ('3') {
+                <span>Wen</span>
+            }
+            @case ('4') {
+                <span>thu</span>
+            }
+            @case ('5') {
+                <span>fri</span>
+            }
+            @case ('6') {
+                <span>Sat</span>
+            }
+            @case ('7') {
+                <span>Sun</span>
+            }
+            @default {
+               <span>Wrong number</span>
+            }
+        }
+        
+    </div>
+
+</div>
+<div class="row" *ngFor="let item of objwork">
+    <div class="col-3">{{item.city}}</div>
+    <div class="col-3">{{item.class}}</div>
+    <div class="col-3">{{item.name}}</div>   
+</div>
+<div>
+<table border="2">
+        <tr *ngFor="let item of objwork" border="1"> <td>{{item.class}}</td>
+            <td>{{item.city}}</td>
+            <td>{{item.class}}</td>
+        </tr>
+</table>
+</div>
+
