@@ -46,6 +46,9 @@
         <li class="nav-item">
           <a class="nav-link" routerLink="payment">payment</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="toaster">toaster</a>
+        </li>
         <form class="d-flex myfx">
           <select  name="selectedRole" [(ngModel)]="selectedRole"  (ngModelChange)="onRoleChange($event)" >
             <option value="user" >User role</option>
@@ -59,9 +62,7 @@
           </select>
         </form>
       </ul>
-      
     </div>
-    
   </nav>
   <div class="container">
     <router-outlet></router-outlet>

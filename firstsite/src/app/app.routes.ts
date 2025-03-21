@@ -18,6 +18,7 @@ import { ForReuseComponent } from './for-reuse/for-reuse.component';
 import { AnimationComponent } from './animation/animation.component';
 import { SignalsComponent } from './signals/signals.component';
 import { PaymentComponent } from './payment/payment.component';
+import { ToasterComponent } from './toaster/toaster.component';
 export const routes: Routes = [    
 {
    path:'',
@@ -98,6 +99,10 @@ component:LogincompComponent,
  ,{
     path:'payment',
     component:PaymentComponent
+ },
+ {
+    path:'toaster',
+    component:ToasterComponent
  }
  
  ]

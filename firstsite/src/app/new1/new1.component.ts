@@ -46,9 +46,13 @@ export class New1Component {
 //  }
 
 user:String=""
+currentValue2:String=""
 constructor(private service1:Service1Service){
   this.service1.onRoleChange$.subscribe((role:String)=>{
          this.user=role
+  })
+  this.service1.role$.subscribe((role:string)=>{
+    this.currentValue2=role;
   })
 }
 
