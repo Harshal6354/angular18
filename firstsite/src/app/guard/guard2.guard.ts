@@ -6,9 +6,10 @@ import { CanActivate, Router } from '@angular/router';
 })
 export class guard2Guard implements CanActivate {
   constructor(private router: Router) {}
+
   canActivate(): boolean {
     console.log('Guard activated!');
-    const isLoggedIn = !!localStorage.getItem('token'); 
+    const isLoggedIn = !!localStorage.getItem('token');
     if (!isLoggedIn) {
       this.router.navigate(['/login']);
       return false;

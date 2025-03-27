@@ -95,11 +95,23 @@
               "https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
             ]
           }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "src/**/*.ts",
+              "src/**/*.html"
+            ]
+          }
         }
       }
     }
   },
   "cli": {
-    "analytics": "c26826c2-ff50-47e9-ba6e-014a5360fc30"
+    "analytics": "c26826c2-ff50-47e9-ba6e-014a5360fc30",
+    "schematicCollections": [
+      "angular-eslint"
+    ]
   }
 }

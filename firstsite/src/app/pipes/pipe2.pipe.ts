@@ -6,8 +6,9 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class Pipe2Pipe implements PipeTransform {
 
-  transform(value: unknown, ...args: unknown[]): unknown {
+  transform(value: unknown, ...args: unknown[]):any {
+    if(value !=null){
     return null;
   }
-
+}
 }

@@ -12,13 +12,13 @@ import { Iuser } from '../interface/iUser';
   styleUrl: './api.component.css'
 })
 export class ApiComponent {
-   divBgColor:string='bg-success';
-   isPrimary:boolean = false;
+   divBgColor='bg-success';
+   isPrimary = false;
    onclickBg(){
   this.divBgColor='bg-primary'
    }
-   num1:string='';
-   num2:string='';
+   num1='';
+   num2='';
 onToggle(){
   this.isPrimary=!this.isPrimary;
   }
@@ -34,7 +34,6 @@ onToggle(){
       this.userList=result;
     })
   }
-  
   user:any[]=[{
     "newclass":"A",
     "Rollno":"B"

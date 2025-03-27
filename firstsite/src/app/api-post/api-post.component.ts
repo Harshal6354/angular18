@@ -52,14 +52,14 @@ export class ApiPostComponent  implements OnInit{
             this.deptList=res.data;
           })
         }
-        isContainer:boolean=true;
+        isContainer=true;
       userlist:any[]=[]
         getUser(){
           this.http.get("https://projectapi.gerasim.in/api/Complaint/getAllComplaints").subscribe((res:any)=>{
                this.userlist=res;
           })
         }       
-        divBgColor: string = 'green'; 
+        divBgColor = 'green'; 
      onclickBg() {
             this.divBgColor = 'red'; 
           }

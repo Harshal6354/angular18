@@ -4,12 +4,19 @@ import { provideAnimations } from '@angular/platform-browser/animations';
 import { provideToastr } from 'ngx-toastr';
 
 import { routes } from './app.routes';
-import { provideHttpClient } from '@angular/common/http';
-import { MatCardModule } from '@angular/material/card';
+import { HTTP_INTERCEPTORS, provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
+import { AuthInterceptor } from './Interceptor/auth.interceptor';
+
 
 export const appConfig: ApplicationConfig = {
-  providers: [provideHttpClient(), provideZoneChangeDetection({ eventCoalescing: true }), provideRouter(routes),
+  providers: [provideHttpClient(withInterceptorsFromDi()), provideZoneChangeDetection({ eventCoalescing: true }), provideRouter(routes),
     provideAnimations(), // Required for Toastr
-    provideToastr(),  MatCardModule   
+    provideToastr(),
+    {
+      provide:HTTP_INTERCEPTORS,
+      useClass:AuthInterceptor,
+      multi:true
+    }  ,
+      
   ]
 };

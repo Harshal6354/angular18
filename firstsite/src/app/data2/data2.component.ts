@@ -12,10 +12,10 @@ import { Customer } from '../class/customer';
   styleUrl: './data2.component.css'
 })
 export class Data2Component {
-  courseName:string="worksfromhome";
+  courseName="worksfromhome";
   inputType="radio";
 
-  cityName:string="Goa";
+  cityName="Goa";
   
   firstname=signal("Harshal");
 
@@ -27,10 +27,10 @@ export class Data2Component {
    this.courseName="New js course"; 
    this.firstname.set("Sachin");
   }
-   isDiv1Visible:boolean=true;
-   isDiv2Visible:boolean=false;
-   num1:string='';
-   num2:string='';
+   isDiv1Visible=true;
+   isDiv2Visible=false;
+   num1='';
+   num2='';
   StudentofCL: any[] = [
     { studentid: 1, name: 'aaa', city: 'Pune', isActive: false },
     { studentid: 2, name: 'bbb', city: 'Rajkot', isActive: true }
@@ -55,7 +55,7 @@ export class Data2Component {
   //     this.div1Bgcolor="bg-primary";
   //    }
 
-  dayNumber:string='';
+  dayNumber='';
  
 
   objwork:any[]=[

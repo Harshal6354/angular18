@@ -15,7 +15,7 @@ export class ToasterComponent {
       this.toaster.success("Success","this is success",{closeButton:true,timeOut:500})
     }
     error(){
-      this.toaster.error("error","this is error",{closeButton:true,positionClass:'toast-top-left',timeOut:5000,toastClass:'toast1'})
+      this.toaster.error("error","this is error",{closeButton:true,positionClass:'toast-top-left',timeOut:5000})
 
     }
 }

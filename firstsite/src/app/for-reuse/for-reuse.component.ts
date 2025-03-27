@@ -14,10 +14,10 @@ import { Constant } from '../constant/constant';
 })
 
 export class ForReuseComponent {
- isContainer:boolean=true;
+ isContainer=true;
  userlist:any[]=[];
  http=inject(HttpClient);
- isApi:boolean=false;
+ isApi=false;
  Validation_message:any=Constant.VALIDATION_MESSAGE;
  getuser(){
   this.http.get('https://jsonplaceholder.typicode.com/users').subscribe((res:any)=>{

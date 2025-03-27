@@ -19,91 +19,92 @@ import { AnimationComponent } from './animation/animation.component';
 import { SignalsComponent } from './signals/signals.component';
 import { PaymentComponent } from './payment/payment.component';
 import { ToasterComponent } from './toaster/toaster.component';
-export const routes: Routes = [    
-{
-   path:'',
-   redirectTo:'login',
-   pathMatch:'full'
-},
-{   
-path:'login',
-component:LogincompComponent,
-
-},
-{
- path:'',
- component:LayoutComponent,
- children:[
-    {
-        path:'add-data2',
-        component:Data2Component,          
-    },
-    {
-       path:'data-bind',
-        component:DataBindingComponent,
-        canActivate:[guard2Guard]
-    },
-    {
-        path:'add-comp',
-        component:AddcomponentComponent,
-        canActivate:[guard2Guard]
-    },
-    {
-        path:'new1-comp',
-        component:New1Component
-    },
-    {
-        path:'rsform',
-        component:RsFormComponent,
-        
-    },
-    {
-        path:'api-comp',
-        component:ApiComponent
-    },
-    {
-        path:'pipe-comp',
-        component:PipeComponent
-    },
-    {
-        path:'data2',
-        component:Data2Component
-    }, 
-    {
-        path:'api-post',
-        component:ApiPostComponent
-    },
-    {
-        path:'api-view',
-        component:ViewchildComponent
- },
- {
-    path:'lifecycle',
-    component:LifecylceComponent
- },
- {
-    path:'template',
-    component:TemplateComponent
- },
- {
-    path:'for-reuse',
-    component:ForReuseComponent
- },{
-    path:'animation',
-    component:AnimationComponent
- }
- ,{
-    path:'signal',
-    component:SignalsComponent
- }
- ,{
-    path:'payment',
-    component:PaymentComponent
- },
- {
-    path:'toaster',
-    component:ToasterComponent
- }
- 
- ]
-}];
+export const routes: Routes = [
+  {
+    path: '',
+    redirectTo: 'login',
+    pathMatch: 'full',
+  },
+  {
+    path: 'login',
+    component: LogincompComponent,
+  },
+  {
+    path: '',
+    component: LayoutComponent,
+    children: [
+      {
+        path: 'add-data2',
+        component: Data2Component,
+      },
+      {
+        path: 'data-bind',
+        component: DataBindingComponent,
+        canActivate: [guard2Guard],
+      },
+      {
+        path: 'add-comp',
+        component: AddcomponentComponent,
+        canActivate: [guard2Guard],
+      },
+      {
+        path: 'new1-comp',
+        component: New1Component,
+        canActivate: [guard2Guard],
+      },
+      {
+        path: 'rsform',
+        component: RsFormComponent,
+        canActivateChild: [guard2Guard],
+      },
+      {
+        path: 'api-comp',
+        component: ApiComponent,
+      },
+      {
+        path: 'pipe-comp',
+        component: PipeComponent,
+      },
+      {
+        path: 'data2',
+        component: Data2Component,
+      },
+      {
+        path: 'api-post',
+        component: ApiPostComponent,
+      },
+      {
+        path: 'api-view',
+        component: ViewchildComponent,
+      },
+      {
+        path: 'lifecycle',
+        component: LifecylceComponent,
+      },
+      {
+        path: 'template',
+        component: TemplateComponent,
+      },
+      {
+        path: 'for-reuse',
+        component: ForReuseComponent,
+      },
+      {
+        path: 'animation',
+        component: AnimationComponent,
+      },
+      {
+        path: 'signal',
+        component: SignalsComponent,
+      },
+      {
+        path: 'payment',
+        component: PaymentComponent,
+      },
+      {
+        path: 'toaster',
+        component: ToasterComponent,
+      },
+    ],
+  },
+];

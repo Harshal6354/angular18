@@ -1,2 +1,8 @@
-
-<div><span>{{message}}</span></div>
+<!-- <div
+  class="alert alert-warning"
+  [ngClass]="{ 'alert-success': new_alert === 'Success' }"
+>
+  <strong>{{ new_alert }}</strong
+  >{{ message }}
+</div> -->
+<button (click)="onBTnclick()" [class]="btnClass">{{ btnName }}</button>

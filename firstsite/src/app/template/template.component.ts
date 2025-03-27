@@ -9,8 +9,8 @@ import { FormsModule } from '@angular/forms';
   styleUrls: ['./template.component.css']
 })
 export class TemplateComponent{
-  isUserloggedIn: boolean = false;
-  UserName: string = "Chetan";
+  isUserloggedIn = false;
+  UserName = "Chetan";
   @ViewChild('dynamictm') dynaTemplate: TemplateRef<any> | undefined;
   @ViewChild('dynamicContainer', { read: ViewContainerRef }) dynaContainer: ViewContainerRef | undefined;
   LoadTemplate()

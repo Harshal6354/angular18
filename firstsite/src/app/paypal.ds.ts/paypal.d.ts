@@ -1,1 +1,1 @@
-declare var paypal:any;
+declare let paypal:any;
