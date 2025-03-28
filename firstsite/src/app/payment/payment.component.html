@@ -11,13 +11,19 @@
 
   <div id="card-container"></div>
 
-  <button 
-    id="card-button" 
-    [disabled]="isPaymentLoading" 
-    (click)="handlePayment()" 
-    class="pay-button">
+  <button
+    id="card-button"
+    [disabled]="isPaymentLoading"
+    (click)="handlePayment()"
+    class="pay-button"
+  >
     <span *ngIf="isPaymentLoading">Processing...</span>
-    <span *ngIf="!isPaymentLoading" (click)="storedata()" >Pay Now</span>
-
+    <span
+      *ngIf="!isPaymentLoading"
+      (click)="storedata()"
+      (keyup.enter)="storedata()"
+      tabindex="0"
+      >Pay Now</span
+    >
   </button>
 </div>

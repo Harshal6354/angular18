@@ -1,38 +1,21 @@
 <div>
-  <div
-    style="
-      max-width: 400px;
-      background-color: red;
-      margin: auto;
-      padding: 1rem;
-      border-radius: 10%;
-    "
-  >
+  <div class="c1">
     <mat-card>
       <mat-card-header>
-        <mat-card-title>My card</mat-card-title>
-        <mat-card-subtitle>component</mat-card-subtitle>
-        <img src="image/myImg.jpg" mat-card-avatar />
+        <mat-card-title>{{ Validation }}</mat-card-title>
+        <mat-card-subtitle>{{ Validform }}</mat-card-subtitle>
+        <img src="image/myImg.jpg" alt="" mat-card-avatar />
       </mat-card-header>
     </mat-card>
   </div>
-  <div
-    style="
-      max-width: 400px;
-      background-color: red;
-      margin-top: 100px;
-      padding: 1rem;
-      border-radius: 10%;
-      align-items: center;
-    "
-  >
+  <div class="c2">
     <mat-card>
       <mat-card-header>
         <mat-card-title>
           <app-reuse [myclassNAME]="'MY CLASS A'"></app-reuse>
         </mat-card-title>
         <mat-card-subtitle>component</mat-card-subtitle>
-        <img src="image/myImg.jpg" mat-card-avatar />
+        <img src="image/myImg.jpg" alt="" mat-card-avatar />
       </mat-card-header>
     </mat-card>
   </div>

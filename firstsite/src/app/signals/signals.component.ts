@@ -6,10 +6,16 @@ import {
   OnInit,
   signal,
 } from '@angular/core';
-import { single } from 'rxjs';
 import { Iuser } from '../interface/iUser';
 import { HttpClient } from '@angular/common/http';
-import { JsonPipe } from '@angular/common';
+
+interface IPost {
+  userId: number;
+  id: number;
+  title: string;
+  body: string;
+}
+
 @Component({
   selector: 'app-signals',
   standalone: true,
@@ -33,7 +39,6 @@ export class SignalsComponent implements OnInit {
   newCourse: string = 'java';
 
   constructor() {
-    const Fname = this.Mysignal();
     setTimeout(() => {
       this.newCourse = 'dotnet';
       this.Mysignal.set(10);
@@ -65,19 +70,19 @@ export class SignalsComponent implements OnInit {
 
   // interceptor
 
-  respone: any = <any>[];
+  respone: IPost[] = [];
 
   ngOnInit(): void {
-    this.http.get('https://jsonplaceholder.typicode.com/posts').subscribe({
-      next: (res: any) => {
-        console.log('API Response:', res);
-        this.respone = JSON.stringify(res);
-      },
-      error: (err) => {
-        console.error('API Error:', err);
-      },
-    });
+    this.http
+      .get<IPost[]>('https://jsonplaceholder.typicode.com/posts')
+      .subscribe({
+        next: (res: IPost[]) => {
+          this.respone = res;
+          console.log('api res', res);
+        },
+        error: (error) => {
+          console.log(error);
+        },
+      });
   }
-
-  ngOnChange() {}
 }

@@ -1,0 +1,17 @@
+.c1 {
+  max-width: 400px;
+  background-color: red;
+  margin: auto;
+  padding: 1rem;
+  border-radius: 10%;
+}
+.c2 {
+  max-width: 400px;
+  background-color: red;
+  margin-top: 100px;
+  padding: 1rem;
+  border-radius: 10%;
+  align-items: center;
+  display: inline-block;
+  position: relative;
+}

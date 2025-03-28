@@ -1,4 +1,4 @@
-import { Component, ElementRef, ViewChild, AfterViewInit } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { ReuseComponent } from '../REUSEBALECOMP/reuse/reuse.component';
 
 @Component({
@@ -8,12 +8,7 @@ import { ReuseComponent } from '../REUSEBALECOMP/reuse/reuse.component';
   templateUrl: './viewchild.component.html',
   styleUrl: './viewchild.component.css',
 })
-export class ViewchildComponent implements AfterViewInit {
+export class ViewchildComponent {
   @ViewChild('txt') textBox?: ElementRef;
   @ViewChild(ReuseComponent) reusecomp?: ReuseComponent;
-  ngAfterViewInit(): void {
-    const value = this.textBox?.nativeElement.value;
-    debugger;
-    const alertMode = this.reusecomp?.message;
-  }
 }
