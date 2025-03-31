@@ -10,7 +10,6 @@ import { LogincompComponent } from './logincomp/logincomp.component';
 import { LayoutComponent } from './layout/layout.component';
 import { guard2Guard } from './guard/guard2.guard';
 import { ApiPostComponent } from './api-post/api-post.component';
-import { viewChild } from '@angular/core';
 import { ViewchildComponent } from './viewchild/viewchild.component';
 import { LifecylceComponent } from './lifecylce/lifecylce.component';
 import { TemplateComponent } from './template/template.component';
@@ -19,6 +18,8 @@ import { AnimationComponent } from './animation/animation.component';
 import { SignalsComponent } from './signals/signals.component';
 import { PaymentComponent } from './payment/payment.component';
 import { ToasterComponent } from './toaster/toaster.component';
+import { NgrxComponent } from './ngrx/ngrx.component';
+// import { }
 export const routes: Routes = [
   {
     path: '',
@@ -104,6 +105,10 @@ export const routes: Routes = [
       {
         path: 'toaster',
         component: ToasterComponent,
+      },
+      {
+        path: 'ngrx',
+        component: NgrxComponent,
       },
     ],
   },
